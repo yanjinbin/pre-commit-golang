@@ -13,7 +13,7 @@ golang hooks for http://pre-commit.com/
 
 Add this to your `.pre-commit-config.yaml`
 
-    - repo: https://github.com/dnephin/pre-commit-golang
+    - repo: https://github.com/yanjinbin/pre-commit-golang
       rev: master
       hooks:
         - id: go-fmt
@@ -29,9 +29,10 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-unit-tests
         - id: go-build
         - id: go-mod-tidy
+        - id: go-fumpt
 
 ### Available hooks
-
+- `go-fumpt` - Runs `gofumpt`, requires golang
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint but is unmaintained & deprecated in favour of [`golangci-lint`](https://github.com/golangci/golangci-lint)

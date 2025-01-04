@@ -99,3 +99,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofumpt`, requires golang"
+-   id: go-work-tidy
+    name: 'go-work-tidy'
+    entry: run-go-work-tidy.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go work tidy`, requires golang"

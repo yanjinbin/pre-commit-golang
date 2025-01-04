@@ -31,7 +31,7 @@ linters:
 #    - errorlint
 #    - containedctx
 #    - contextcheck
-    # - gomnd
+#    - gomnd
   fast: false
 
 linters-settings:
