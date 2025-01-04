@@ -1,0 +1,66 @@
+linters:
+  # Disable all linters.
+  # Default: false
+  disable-all: true
+  # Enable specific linter
+  # https://golangci-lint.run/usage/linters/#enabled-by-default
+  enable:
+    - bodyclose
+#    - decorder
+#    - golint
+#    - goerr113
+#    - gosimple
+#    - ifshort
+#    - nestif
+#    - govet
+#    - ineffassign
+#    - staticcheck
+#    - asciicheck
+#    - gocyclo
+#    - noctx
+#    - prealloc
+#    - unconvert
+#    - rowserrcheck
+#    - scopelint
+#    - sqlclosecheck
+#    - staticcheck
+#    - stylecheck
+#    - unparam
+#    - unused
+#    - varcheck
+#    - errorlint
+#    - containedctx
+#    - contextcheck
+    # - gomnd
+  fast: false
+
+linters-settings:
+  gomnd:
+    severity: warning
+  gci:
+    skip-generated: true
+    s:
+      - standard
+      - default
+  nestif:
+    # Minimal complexity of if statements to report.
+    # Default: 5
+    min-complexity: 10
+  cyclop:
+    maxComplexity: 15
+  tagliatelle:
+    # Check the struck tag name case.
+    case:
+      # Use the struct preload name to check the name of the struct tag.
+      # Default: false
+      use-field-name: false
+      rules:
+        # Any struct tag type can be used.
+        # Support string case: `camel`, `pascal`, `kebab`, `snake`, `upperSnake`, `goCamel`, `goPascal`, `goKebab`, `goSnake`, `upper`, `lower`, `header`.
+        # 约定 json toml 和 form struct tag 都是 snake case
+        json: snake
+        toml: snake
+        form: snake
+        mapstructure: snake
+        xml: snake
+
