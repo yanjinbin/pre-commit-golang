@@ -93,3 +93,9 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `go mod vendor`, requires golang"
+-   id: go-fumpt
+    name: 'go-fumpt'
+    entry: run-go-fumpt.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `gofumpt`, requires golang"
