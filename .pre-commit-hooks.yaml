@@ -99,6 +99,16 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofumpt`, requires golang"
+-   id: check-xmllint
+    name: Check XML files format with xmllint
+    entry: run-check-xml-lint.sh
+    language: script
+    pass_filenames: true
+    types: [xml]
+    args: []
+    description: |
+    Check and optionally format XML files with xmllint.
+    Supports indentation configuration via --indent, --tab, and .editorconfig.
 -   id: semver-check-tags
     name: 'semver-check-tags'
     entry: bash run-semver-check-tags.sh
