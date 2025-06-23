@@ -101,10 +101,7 @@
     description: "Runs `gofumpt`, requires golang"
 -   id: semver-check-tags
     name: Check Git Tags for SemVer Compliance
-    entry: bash run-semver-check-tags.sh -gv
+    entry: bash run-semver-check-tags.sh
     language: script
-    stages: [pre-push]
+    description: Validate all Git tags follow Semantic Versioning (SemVer)
     pass_filenames: false
-    description: Validates that all Git tags follow Semantic Versioning (SemVer) rules. even if no change file commited
-    always_run: true
-
