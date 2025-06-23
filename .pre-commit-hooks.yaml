@@ -100,6 +100,7 @@
     language: 'script'
     description: "Runs `gofumpt`, requires golang"
 -   id: semver-check-tags
+    name: 'semver-check-tags'
     entry: bash run-semver-check-tags.sh
     language: system
     pass_filenames: false
